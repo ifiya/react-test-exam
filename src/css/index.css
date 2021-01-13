@@ -1,0 +1,207 @@
+body {
+    background-color: #F0F1F6;
+}
+
+#textMain {
+    width: 900px;
+    text-align: left;
+    margin: 20%;
+    margin-top: 3%;
+
+}#main{
+    position: relative;
+}
+
+.border {
+    border-color: #DDDDDD;
+}
+
+.whole {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 7px;
+    
+}
+
+.question {
+    width: 65%;
+    display: inline-block;
+}
+
+.panel {
+    position: relative;
+}
+
+.question {
+
+    left: 0;
+    right: 0;
+}
+
+.question_mark {
+    width: 35%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    text-align: right
+}
+
+
+
+#question_enter {
+    width: 100%;
+}
+
+.title-template {
+    position: relative;
+}
+
+.title-template select {
+    width: 50px;
+    height: 27px;
+    border-color: #DDDDDD;
+}
+
+.setting_delete {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.imgicon {
+    background-color: #ffffff;
+    width: 18px;
+    margin: 8px;
+}
+
+.add {
+    padding: 0;
+}
+
+.bg1 {
+    background-color: #F5F8FA;
+}
+.bg2 {
+    background-color: #F0F1F6;
+}
+
+tr {
+    width: 530px;
+    margin-top: 10px;
+    padding: 5px;
+    display: inline-block;
+}
+
+td {
+    padding-right: 5px;
+    display: inline;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+td .enter {
+    width: 420px;
+}
+
+td .radio {
+    width: 1%;
+}
+
+.addfooter {
+    display: block;
+    margin-top: 15px;
+}
+
+.correct {
+    background-color: #ffffff;
+}
+
+.button-add-question{
+    background-color: #F0F1F6 !important;
+    border: none !important;
+    color: black !important;
+    padding: 0  !important;
+    font-size: 15px !important;
+}
+.content{
+    overflow-y: scroll;
+    height: 250px;
+   
+}
+.content a{
+    font-size: 14px;
+}
+.fontsize-input{
+    font-size: 15px;
+}
+.input-add{
+    margin-top: 2px;
+}
+.dropdown-toggle::after{
+    position: absolute;
+    left: 160px;
+    top: 10px;
+}
+.spanradio {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.demoSpan1 {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+
+}
+
+.spanbg1 {
+    background: #E6E7E8;
+}
+
+.demoSpan1:after,
+.demoSpan1:before {
+    content: '';
+    height: 12.5px;
+    width: 2px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    border-radius: 10px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 10px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+
+.demoSpan1:before {
+    height: 6px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    top: 9px;
+    left: 5px;
+}
+
+.spanbg2 {
+    background: #0099A8;
+
+}
+.footerButton{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
