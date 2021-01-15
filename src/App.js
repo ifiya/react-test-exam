@@ -1,11 +1,8 @@
 import './App.css';
 import './css/index.css';
 import Footer from './js/Footer.js';
-import React, { Component } from 'react'
+import React from 'react'
 class App extends React.Component {
-  handleChange() {
-    return <div>123456</div>
-  }
   render() {
     return (
       <div id="textMain">
@@ -17,5 +14,4 @@ class App extends React.Component {
   }
 
 }
-
 export default App;

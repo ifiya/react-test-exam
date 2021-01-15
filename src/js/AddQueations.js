@@ -1,6 +1,6 @@
 import Model from './Model.js';
-import add from './../img/add.png';
-import React, { Component } from 'react'
+import DropTable from './DropTable.js';
+import React from 'react'
 import './bootstrap.min.css';
 import './../css/index.css';
 //import React from 'react'
@@ -20,14 +20,21 @@ document.head.appendChild(script);
 document.head.appendChild(script1);
 document.head.appendChild(script2);
 class AddQueations extends React.Component {
-
     constructor(props) {
         super(props)
         this.state = {
             comps: [{ id: 0 }],
-            count: 0
+            count: 0,
+            droplinkValues: ["Choice", "Essay", "Fill-in-the-blank", "Sub-question", "File upload", "Hot spot", "Image labeling", "Matching", "Media", "Ordering"]
         }
     }
+    onClickDrop(droplinkValue) {
+
+        var { comps } = this.state;
+        var count = this.state.count;
+        this.setState({ comps: comps.concat([Date.now()]), count: count++ })
+    }
+
     removeTimeItem(index) {
         let arr = this.state.comps.slice();
         arr.splice(index, 1);
@@ -35,45 +42,34 @@ class AddQueations extends React.Component {
     }
     /*<input className="imgicon add" id="addsection" type="image" src="img/add.png" onClick={
                     () => this.setState({ comps: comps.concat([Date.now()]), count: count++ })
-    
+
                 } />Add Section*/
     render() {
-        const { comps } = this.state;
-        var count = this.state.count;
+        var { comps } = this.state;
+        let droplinkValues = this.state.droplinkValues.slice();
         return (
             <div>
                 {comps.map((comp, index) => {
-                    return <Model key={index} id={index} onClickRemove={() => this.removeTimeItem()} />
+                    return <Model key={index} id={index} onClickRemove={() => this.removeTimeItem()} handleUpdateData={(textareaAndbutton) => this.props.handleUpdateData(textareaAndbutton)} />
                 })}
-
                 <div id="footer" className="whole bg2">
-                    <div class="dropdown">
-                        <button class=" btn btn-secondary dropdown-toggle button-add-question" type="button" id="dropdownMenuButton" onClick={
-                            () => this.setState({ comps: comps.concat([Date.now()]), count: count++ })
-
-                        }>
-                            <input className="imgicon add bg2 input-add" id="addsection" type="image" src={add} alt="add new question" aria-label=" " /><span style={{ position: "absolute" }} >Add new question</span>
+                    <div className="dropdown">
+                        <button className=" btn btn-secondary dropdown-toggle button-add-question" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                            <input className="imgicon add bg2 input-add" id="addsection" type="image" src="img/add.png" alt="img" aria-lable="img" /><span style={{ position: "absolute" }}>Add new question</span>
                         </button>
-                        <div class="dropdown-menu content" >
-                            <button class="dropdown-item" >Choice</button>
-                            <a class="dropdown-item" href="https://www.baidu.com/">Essay</a>
-                            <a class="dropdown-item" href="https://www.baidu.com/">Fill-in-the-blank</a>
-                            <a class="dropdown-item" href="https://www.baidu.com/">Sub-question</a>
-                            <a class="dropdown-item" href="https://www.baidu.com/">File upload</a>
-                            <a class="dropdown-item" href="https://www.baidu.com/">Hot spot</a>
-                            <a class="dropdown-item" href="https://www.baidu.com/">Image labeling</a>
-                            <a class="dropdown-item" href="https://www.baidu.com/">Matching</a>
-                            <a class="dropdown-item" href="https://www.baidu.com/">Media</a>
-                            <a class="dropdown-item" href="https://www.baidu.com/">Ordering</a>
+                        <div className="dropdown-menu content" >
+
+                            {droplinkValues.map((droplinkValue) => {
+                                return <DropTable value={droplinkValue} key={droplinkValue.toString()} onClickDrop={
+                                    () => this.onClickDrop(droplinkValue)} />
+                            }
+                            )}
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
-
         )
     }
 }
+
 export default AddQueations;
