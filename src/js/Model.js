@@ -1,5 +1,8 @@
 import InputRadio from './InputRadio.js';
 import React, { Component } from 'react'
+import add from './../img/add.png'
+import setting from './../img/setting.png'
+import deletes from './../img/delete.png'
 //import React from 'react'
 class Model extends React.Component {
     constructor(props) {
@@ -85,8 +88,8 @@ class Model extends React.Component {
                         </select>
                 &nbsp;&nbsp;Question {id}
                         <div className="setting_delete">
-                            <input className="imgicon" type="image" src="img/setting.png" />
-                            <input className="imgicon" type="image" src="img/delete.png" onClick={() => this.props.onClickRemove()} />
+                            <input className="imgicon" type="image" src={setting} />
+                            <input className="imgicon" type="image" src={deletes} onClick={() => this.props.onClickRemove()} />
                         </div>
                     </div>
 
@@ -103,7 +106,7 @@ class Model extends React.Component {
                                         handleInputareaChange={(inputarea) => this.handleInputareaChange(inputarea, index)} />
                                 })}
                                 <tr className="addfooter fontsize-input"><td><label htmlFor={this.props.id + "-addsection-btn"}>
-                                    <input className="imgicon add input-add" id={this.props.id + "-addsection-btn"} type="image" src="img/add.png" onClick={
+                                    <input className="imgicon add input-add" id={this.props.id + "-addsection-btn"} type="image" src={add} onClick={
                                         () => this.setState({ comps: comps.concat(t) })
                                     } /> <span style={{ position: "absolute" }}>Add choice</span></label>
                                 </td></tr>

@@ -3,6 +3,7 @@ import DropTable from './DropTable.js';
 import React from 'react'
 import './bootstrap.min.css';
 import './../css/index.css';
+import add from './../img/add.png'
 //import React from 'react'
 var script = document.createElement('script');
 var script1 = document.createElement('script');
@@ -55,7 +56,7 @@ class AddQueations extends React.Component {
                 <div id="footer" className="whole bg2">
                     <div className="dropdown">
                         <button className=" btn btn-secondary dropdown-toggle button-add-question" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                            <input className="imgicon add bg2 input-add" id="addsection" type="image" src="img/add.png" alt="img" aria-lable="img" /><span style={{ position: "absolute" }}>Add new question</span>
+                            <input className="imgicon add bg2 input-add" id="addsection" type="image" src={add} alt="img" aria-lable="img" /><span style={{ position: "absolute" }}>Add new question</span>
                         </button>
                         <div className="dropdown-menu content" >
 
