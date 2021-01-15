@@ -56,7 +56,7 @@ class AddQueations extends React.Component {
                 <div id="footer" className="whole bg2">
                     <div className="dropdown">
                         <button className=" btn btn-secondary dropdown-toggle button-add-question" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                            <input className="imgicon add bg2 input-add" id="addsection" type="image" src={add} alt="img" aria-lable="img" /><span style={{ position: "absolute" }}>Add new question</span>
+                            <input className="imgicon add bg2 input-add" id="addsection" type="image" src={add} alt="img" aria-label="img" /><span style={{ position: "absolute" }}>Add new question</span>
                         </button>
                         <div className="dropdown-menu content" >
 

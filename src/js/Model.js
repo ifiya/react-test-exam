@@ -1,5 +1,5 @@
 import InputRadio from './InputRadio.js';
-import React, { Component } from 'react'
+import React from 'react'
 import add from './../img/add.png'
 import setting from './../img/setting.png'
 import deletes from './../img/delete.png'
@@ -64,7 +64,7 @@ class Model extends React.Component {
     }
     render() {
 
-        var textareaAndbutton = this.state.textareaAndbutton;
+        //var textareaAndbutton = this.state.textareaAndbutton;
         //this.props.handleUpdateData(textareaAndbutton);
 
         var comps = this.state.comps.slice();
@@ -88,8 +88,8 @@ class Model extends React.Component {
                         </select>
                 &nbsp;&nbsp;Question {id}
                         <div className="setting_delete">
-                            <input className="imgicon" type="image" src={setting} />
-                            <input className="imgicon" type="image" src={deletes} onClick={() => this.props.onClickRemove()} />
+                            <input className="imgicon" type="image" src={setting} alt="" aria-label="" />
+                            <input className="imgicon" type="image" src={deletes} alt="" aria-label="" onClick={() => this.props.onClickRemove()} />
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@ class Model extends React.Component {
                                         handleInputareaChange={(inputarea) => this.handleInputareaChange(inputarea, index)} />
                                 })}
                                 <tr className="addfooter fontsize-input"><td><label htmlFor={this.props.id + "-addsection-btn"}>
-                                    <input className="imgicon add input-add" id={this.props.id + "-addsection-btn"} type="image" src={add} onClick={
+                                    <input className="imgicon add input-add" id={this.props.id + "-addsection-btn"} type="image" src={add} alt="" aria-label="" onClick={
                                         () => this.setState({ comps: comps.concat(t) })
                                     } /> <span style={{ position: "absolute" }}>Add choice</span></label>
                                 </td></tr>
